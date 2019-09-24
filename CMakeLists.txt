@@ -43,10 +43,12 @@ macro(build_spdlog)
       endif()
     endif()
   else()
-    list(APPEND extra_cmake_args "-DCMAKE_C_COMPILER=${CMAKE_C_COMPILER}")
     list(APPEND extra_cmake_args "-DCMAKE_CXX_COMPILER=${CMAKE_CXX_COMPILER}")
   endif()
   list(APPEND extra_cmake_args "-DCMAKE_CXX_FLAGS=${CMAKE_CXX_FLAGS}")
+  list(APPEND extra_cmake_args "-DSPDLOG_BUILD_BENCH=OFF")
+  list(APPEND extra_cmake_args "-DSPDLOG_BUILD_TESTS=OFF")
+  list(APPEND extra_cmake_args "-DSPDLOG_BUILD_EXAMPLES=OFF")
 
   include(ExternalProject)
   # Get spdlog 1.3.1
