@@ -75,5 +75,10 @@ if(NOT spdlog_FOUND OR "${spdlog_VERSION}" VERSION_LESS 1.3.1)
   build_spdlog()
 endif()
 
+if(BUILD_TESTING)
+  find_package(ament_lint_auto REQUIRED)
+  ament_lint_auto_find_test_dependencies()
+endif()
+
 # this ensures that the package has an environment hook setting the PATH
 ament_package()
