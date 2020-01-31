@@ -52,7 +52,7 @@ macro(build_spdlog)
 
   include(ExternalProject)
   # Get spdlog 1.3.1
-  ExternalProject_Add(spdlog-1.3.1
+  externalproject_add(spdlog-1.3.1
     URL https://github.com/gabime/spdlog/archive/v1.3.1.tar.gz
     URL_MD5 3c17dd6983de2a66eca8b5a0b213d29f
     TIMEOUT 600
