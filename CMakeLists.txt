@@ -48,7 +48,9 @@ macro(build_spdlog)
   list(APPEND extra_cmake_args "-DCMAKE_CXX_FLAGS=${CMAKE_CXX_FLAGS}")
   list(APPEND extra_cmake_args "-DSPDLOG_BUILD_TESTS=OFF")
   list(APPEND extra_cmake_args "-DSPDLOG_BUILD_EXAMPLE=OFF")
-  list(APPEND extra_cmake_args "-DSPDLOG_BUILD_SHARED=ON")
+  if (NOT WIN32)
+    list(APPEND extra_cmake_args "-DSPDLOG_BUILD_SHARED=ON")
+  endif()
 
   include(ExternalProject)
   # Get spdlog 1.5.0
