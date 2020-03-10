@@ -46,20 +46,19 @@ macro(build_spdlog)
     list(APPEND extra_cmake_args "-DCMAKE_CXX_COMPILER=${CMAKE_CXX_COMPILER}")
   endif()
   list(APPEND extra_cmake_args "-DCMAKE_CXX_FLAGS=${CMAKE_CXX_FLAGS}")
-  list(APPEND extra_cmake_args "-DSPDLOG_BUILD_BENCH=OFF")
   list(APPEND extra_cmake_args "-DSPDLOG_BUILD_TESTS=OFF")
-  list(APPEND extra_cmake_args "-DSPDLOG_BUILD_EXAMPLES=OFF")
+  list(APPEND extra_cmake_args "-DSPDLOG_BUILD_EXAMPLE=OFF")
+  list(APPEND extra_cmake_args "-DSPDLOG_BUILD_SHARED=ON")
 
   include(ExternalProject)
-  # Get spdlog 1.3.1
-  externalproject_add(spdlog-1.3.1
-    URL https://github.com/gabime/spdlog/archive/v1.3.1.tar.gz
-    URL_MD5 3c17dd6983de2a66eca8b5a0b213d29f
+  # Get spdlog 1.5.0
+  externalproject_add(spdlog-1.5.0
+    URL https://github.com/gabime/spdlog/archive/v1.5.0.tar.gz
+    URL_MD5 a966eea01f81551527853d282896cb4d
     TIMEOUT 600
     CMAKE_ARGS
       -DCMAKE_INSTALL_PREFIX=${CMAKE_CURRENT_BINARY_DIR}/${PROJECT_NAME}_install
       ${extra_cmake_args}
-      -Wno-dev
   )
 
   # The external project will install to the build folder, but we'll install that on make install.
@@ -71,7 +70,7 @@ macro(build_spdlog)
   )
 endmacro()
 
-if(NOT spdlog_FOUND OR "${spdlog_VERSION}" VERSION_LESS 1.3.1)
+if(NOT spdlog_FOUND OR "${spdlog_VERSION}" VERSION_LESS 1.5.0)
   build_spdlog()
 endif()
 
