@@ -49,6 +49,9 @@ macro(build_spdlog)
   list(APPEND extra_cmake_args "-DSPDLOG_BUILD_TESTS=OFF")
   list(APPEND extra_cmake_args "-DSPDLOG_BUILD_EXAMPLE=OFF")
   if(NOT WIN32)
+    # TODO(karsten1987): re-address this once upstream ticket is resolved:
+    # https://github.com/fmtlib/fmt/issues/1604
+    list(APPEND extra_cmake_args "-DCMAKE_CXX_FLAGS=${CMAKE_CXX_FLAGS} -Wno-sign-conversion")
     list(APPEND extra_cmake_args "-DSPDLOG_BUILD_SHARED=ON")
   endif()
 
