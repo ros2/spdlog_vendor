@@ -2,8 +2,8 @@
 Changelog for package spdlog_vendor
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Forthcoming
------------
+1.1.0 (2020-04-10)
+------------------
 * suppress sign conversion warning (`#7 <https://github.com/ros2/spdlog_vendor/issues/7>`_)
 * Fix linting (`#3 <https://github.com/ros2/spdlog_vendor/issues/3>`_)
 * Spdlog vendor update (`#2 <https://github.com/ros2/spdlog_vendor/issues/2>`_)
