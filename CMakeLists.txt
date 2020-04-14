@@ -65,7 +65,11 @@ macro(build_spdlog)
       -DCMAKE_INSTALL_PREFIX=${CMAKE_CURRENT_BINARY_DIR}/${PROJECT_NAME}_install
       ${extra_cmake_args}
     PATCH_COMMAND
-    ${CMAKE_COMMAND} -E chdir <SOURCE_DIR> git apply -p1 --ignore-space-change --whitespace=nowarn ${CMAKE_CURRENT_SOURCE_DIR}/gnuinstalldirs-after-project.patch
+    ${CMAKE_COMMAND} -E chdir <SOURCE_DIR> git apply -v -p1 --ignore-space-change --whitespace=nowarn --summary --apply ${CMAKE_CURRENT_SOURCE_DIR}/gnuinstalldirs-after-project.patch
+    BUILD_IN_SOURCE 1
+    LOG_DIR logs
+    LOG_PATCH 1
+    LOG_MERGED_STDOUTERR 1
   )
 
   # The external project will install to the build folder, but we'll install that on make install.
