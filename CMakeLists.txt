@@ -84,6 +84,10 @@ endif()
 if(BUILD_TESTING)
   find_package(ament_lint_auto REQUIRED)
   ament_lint_auto_find_test_dependencies()
+  add_custom_command(TARGET spdlog-1.5.0
+    POST_BUILD
+    COMMAND ${CMAKE_COMMAND} -P ${CMAKE_CURRENT_SOURCE_DIR}/read-cmake.cmake
+  )
 endif()
 
 # this ensures that the package has an environment hook setting the PATH
