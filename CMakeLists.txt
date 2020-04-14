@@ -68,7 +68,6 @@ macro(build_spdlog)
       ${extra_cmake_args}
     PATCH_COMMAND
     ${Patch_EXECUTABLE} -p1 -N < ${CMAKE_CURRENT_SOURCE_DIR}/gnuinstalldirs-after-project.patch
-    # ${CMAKE_COMMAND} -E copy "${CMAKE_CURRENT_SOURCE_DIR}/spdlog-cmakelists.txt" <SOURCE_DIR>/CMakeLists.txt
   )
 
   # The external project will install to the build folder, but we'll install that on make install.
@@ -87,10 +86,6 @@ endif()
 if(BUILD_TESTING)
   find_package(ament_lint_auto REQUIRED)
   ament_lint_auto_find_test_dependencies()
-  add_custom_command(TARGET spdlog-1.5.0
-    POST_BUILD
-    COMMAND ${CMAKE_COMMAND} -P ${CMAKE_CURRENT_SOURCE_DIR}/read-cmake.cmake
-  )
 endif()
 
 # this ensures that the package has an environment hook setting the PATH
