@@ -56,6 +56,8 @@ macro(build_spdlog)
   endif()
 
   include(ExternalProject)
+  find_package(Patch REQUIRED)
+
   # Get spdlog 1.5.0
   externalproject_add(spdlog-1.5.0
     URL https://github.com/gabime/spdlog/archive/v1.5.0.tar.gz
@@ -64,6 +66,8 @@ macro(build_spdlog)
     CMAKE_ARGS
       -DCMAKE_INSTALL_PREFIX=${CMAKE_CURRENT_BINARY_DIR}/${PROJECT_NAME}_install
       ${extra_cmake_args}
+    PATCH_COMMAND
+    ${Patch_EXECUTABLE} -p1 -N < ${CMAKE_CURRENT_SOURCE_DIR}/gnuinstalldirs-after-project.patch
   )
 
   # The external project will install to the build folder, but we'll install that on make install.
