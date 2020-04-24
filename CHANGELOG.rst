@@ -2,6 +2,10 @@
 Changelog for package spdlog_vendor
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+Forthcoming
+-----------
+* Silence warning from GNUInstallDirs on Windows. (`#10 <https://github.com/ros2/spdlog_vendor/issues/10>`_)
+
 1.1.0 (2020-04-10)
 ------------------
 * suppress sign conversion warning (`#7 <https://github.com/ros2/spdlog_vendor/issues/7>`_)
