@@ -2,8 +2,8 @@
 Changelog for package spdlog_vendor
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Forthcoming
------------
+1.1.1 (2020-04-24)
+------------------
 * Silence warning from GNUInstallDirs on Windows. (`#10 <https://github.com/ros2/spdlog_vendor/issues/10>`_)
 
 1.1.0 (2020-04-10)
