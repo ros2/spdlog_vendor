@@ -42,7 +42,7 @@ This package uses DCO as its confirmation of contributor origin policy. More inf
 
 ### Peer Review Policy [2.iii]
 
-All pull requests will be peer-reviewed, check [ROS 2 Developer Guide](https://index.ros.org/doc/ros2/Contributing/Developer-Guide/#change-control-process) for additional information.
+All pull requests will be peer-reviewed, check the [ROS 2 Developer Guide](https://index.ros.org/doc/ros2/Contributing/Developer-Guide/#change-control-process) for additional information.
 
 ### Continuous Integration [2.iv]
 
@@ -70,7 +70,7 @@ All pull requests must resolve related documentation changes before merging.
 
 ### License [3.iii]
 
-The license for `spdlog_vendor` is Apache 2.0, and a summary is in each source file, the type is declared in the [`package.xml`](./package.xml) manifest file, and a full copy of the license is in the [LICENSE](./LICENSE.md) file. The vendored library, `spdlog` license is MIT as stated in its [Quality declaration](./SPDLOG_QUALITY_DECLARATION.md) document (Section 5.iii).
+The license for `spdlog_vendor` is Apache 2.0, and a summary is in each source file, the type is declared in the [`package.xml`](./package.xml) manifest file, and a full copy of the license is in the [LICENSE](./LICENSE) file. The vendored library, `spdlog` license is MIT as stated in its [Quality declaration](./SPDLOG_QUALITY_DECLARATION.md) document (Section 5.iii).
 
 There is an automated test which runs a linter that ensures each file has a license statement. [Here](https://ci.ros2.org/view/nightly/job/nightly_linux-aarch64_release/lastBuild/testReport/spdlog_vendor/) can be found a list with the latest results of the various linters being run on the package.
 
@@ -162,4 +162,4 @@ Comparing this table with the [Quality Level Comparison Chart of REP2004](https:
 To reach Quality level 3, adding a Vulnerability Disclosure will be needed.
 To reach Quality level 2, adding features documentation will be needed.
 
-non-ROS dependencies Quality level will need to be adjusted accordingly to be equal or below to claims made in this Quality Declaration.
+`spdlog_vendor` is limited by the quality level of the upstream dependency spdlog. In order to reach higher quality levels, the issues limiting `spdlog` will either need to be addressed by `spdlog` itself, or through adequate quality control measures in this package.
