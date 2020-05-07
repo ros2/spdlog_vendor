@@ -30,7 +30,7 @@ This is a vendor package for `spdlog` and as such does not declare its own API.
 
 ### ABI and ABI Stability Within a Released ROS Distribution [1.vi]
 
-As `spdlog_vendor` does not come with its own API/ABI, changes will not affect API/ABI stability.
+As `spdlog_vendor` does not have its own API/ABI, changes will not affect API/ABI stability.
 
 ## Change Control Process [2]
 
@@ -70,7 +70,7 @@ All pull requests must resolve related documentation changes before merging.
 
 ### License [3.iii]
 
-The license for `spdlog_vendor` is Apache 2.0, and a summary is in each source file, the type is declared in the `package.xml` manifest file, and a full copy of the license is in the `LICENSE` file. The vendored library, `spdlog` license is MIT as stated in its quality declaration document (Section 5.iii).
+The license for `spdlog_vendor` is Apache 2.0, and a summary is in each source file, the type is declared in the [`package.xml`](./package.xml) manifest file, and a full copy of the license is in the [LICENSE](./LICENSE.md) file. The vendored library, `spdlog` license is MIT as stated in its [Quality declaration](./SPDLOG_QUALITY_DECLARATION.md) document (Section 5.iii).
 
 There is an automated test which runs a linter that ensures each file has a license statement. [Here](https://ci.ros2.org/view/nightly/job/nightly_linux-aarch64_release/lastBuild/testReport/spdlog_vendor/) can be found a list with the latest results of the various linters being run on the package.
 
@@ -82,21 +82,7 @@ There is an automated test which runs a linter that ensures each file has at lea
 
 ## Testing [4]
 
-### Feature Testing [4.i]
-
-`spdlog_vendor` does not have feature testing. For vendored packages, this will be considered to be addressed in the external dependency.
-
-### Public API Testing [4.ii]
-
-`spdlog_vendor` does not have Public API testing. For vendored packages, this will be considered to be addressed in the external dependency.
-
-### Coverage [4.iii]
-
-`spdlog_vendor` does not provide coverage testing. For vendored packages, this will be considered to be addressed in the external dependency.
-
-### Performance [4.iv]
-
-`spdlog_vendor` does not provide performance testing. For vendored packages, this will be considered to be addressed in the external dependency.
+`spdlog_vendor` is a package providing solely CMake files and therefore does not require feature/API tests and has no coverage or performance requirements.
 
 ### Linters and Static Analysis [4.v]
 
@@ -116,7 +102,7 @@ Currently nightly test results can be seen here:
 
 ### Direct Runtime non-ROS Dependency [5.iii]
 
-`spdlog_vendor` depends directly on the external dependency `spdlog`, which is qualified as quality level 4 in its [Quality Declaration](./spdlog_Q_DECLARATION.md).
+`spdlog_vendor` depends directly on the external dependency `spdlog`, which is qualified as quality level 4 in its [Quality Declaration](./SPDLOG_QUALITY_DECLARATION.md).
 
 ## Platform Support [6]
 
@@ -176,4 +162,4 @@ Comparing this table with the [Quality Level Comparison Chart of REP2004](https:
 To reach Quality level 3, adding a Vulnerability Disclosure will be needed.
 To reach Quality level 2, adding features documentation will be needed.
 
-non-ROS dependencies Quality level will need to be adjusted accordignly to be equal or below to claims made in this Quality Declaration.
+non-ROS dependencies Quality level will need to be adjusted accordingly to be equal or below to claims made in this Quality Declaration.
