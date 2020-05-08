@@ -22,11 +22,11 @@ This is a vendor package for `spdlog` and as such does not declare its own API.
 
 ### API Stability Policy [1.iv]/[1.vi]
 
-`spdlog_vendor` does not have an API of its own, and will limit its dependency on `libyaml` to API stable releases within a released ROS distribution.
+`spdlog_vendor` does not have an API of its own, and will limit its dependency on `spdlog` to API stable releases within a released ROS distribution.
 
 ### ABI Stability Policy [1.v]/[1.vi]
 
-`spdlog_vendor` does not have an ABI of its own, and will limit its dependency on `libyaml` to ABI stable releases within a released ROS distribution.
+`spdlog_vendor` does not have an ABI of its own, and will limit its dependency on `spdlog` to ABI stable releases within a released ROS distribution.
 
 ## Change Control Process [2]
 
@@ -42,7 +42,7 @@ All pull requests will be peer-reviewed, check the [ROS 2 Developer Guide](https
 
 ### Continuous Integration [2.iv]
 
-All pull request must pass CI on all [tier 1 platforms](https://www.ros.org/reps/rep-2000.html#support-tiers).
+All pull requests must pass CI on all [tier 1 platforms](https://www.ros.org/reps/rep-2000.html#support-tiers).
 
 Currently nightly results can be seen here:
 * [linux-aarch64_release](https://ci.ros2.org/view/nightly/job/nightly_linux-aarch64_release/lastBuild/testReport/spdlog_vendor/)
