@@ -20,17 +20,13 @@ Below are the rationales, notes, and caveats for this claim, organized by each r
 
 This is a vendor package for `spdlog` and as such does not declare its own API.
 
-### API Stability Policy [1.iv]
+### API Stability Policy [1.iv]/[1.vi]
 
-`spdlog_vendor` does not have an API of its own, and will limit its dependency on `spdlog` to API stable releases within a released ROS distribution.
+`spdlog_vendor` does not have an API of its own, and will limit its dependency on `libyaml` to API stable releases within a released ROS distribution.
 
-### ABI Stability Policy [1.v]
+### ABI Stability Policy [1.v]/[1.vi]
 
-`spdlog_vendor` does not have an ABI of its own, and will limit its dependency on `spdlog` to ABI stable releases within a released ROS distribution.
-
-### ABI and ABI Stability Within a Released ROS Distribution [1.vi]
-
-As `spdlog_vendor` does not have its own API/ABI, changes will not affect API/ABI stability.
+`spdlog_vendor` does not have an ABI of its own, and will limit its dependency on `libyaml` to ABI stable releases within a released ROS distribution.
 
 ## Change Control Process [2]
 
@@ -62,7 +58,7 @@ All pull requests must resolve related documentation changes before merging.
 
 ### Feature Documentation [3.i]
 
-`spdlog_vendor` does not currently document its features.
+`spdlog_vendor` does not have features other than importing the external dependency `spdlog` and therefore does not require feature documentation.
 
 ### Public API Documentation [3.ii]
 
@@ -159,7 +155,6 @@ The chart below compares the requirements in the REP-2004 with the current state
 
 Comparing this table with the [Quality Level Comparison Chart of REP2004](https://github.com/ros-infrastructure/rep/blob/master/rep-2004.rst#quality-level-comparison-chart) lead us to decide that this package qualifies to Quality Level 4.
 
-To reach Quality level 3, adding a Vulnerability Disclosure will be needed.
-To reach Quality level 2, adding features documentation will be needed.
+To reach Quality level 2, adding a Vulnerability Disclosure will be needed.
 
 `spdlog_vendor` is limited by the quality level of the upstream dependency spdlog. In order to reach higher quality levels, the issues limiting `spdlog` will either need to be addressed by `spdlog` itself, or through adequate quality control measures in this package.
