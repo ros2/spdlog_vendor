@@ -87,10 +87,6 @@ endif()
 if(BUILD_TESTING)
   find_package(ament_lint_auto REQUIRED)
   ament_lint_auto_find_test_dependencies()
-  find_package(ament_cmake_copyright QUIET)
-  if(ament_cmake_copyright_FOUND)
-    ament_copyright()
-  endif()
 endif()
 
 # this ensures that the package has an environment hook setting the PATH
