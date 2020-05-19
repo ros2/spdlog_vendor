@@ -2,7 +2,7 @@ This document is a declaration of software quality for the `spdlog` external dep
 
 # `spdlog` Quality Declaration
 
-The package `spdlog` claims to be in the **Quality Level 4** category.
+This quality declaration claims that `spdlog` is in the **Quality Level 4** category.
 
 Though `spdlog` meets many of the criteria stated for software quality, there are key points preventing it from achieving a higher level category.
 As `spdlog` itself is not a ROS package, many of these gaps could be reconciled in the vendor package that is used to control `spdlog` distribution within ROS.
