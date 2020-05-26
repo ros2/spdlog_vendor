@@ -2,8 +2,8 @@
 Changelog for package spdlog_vendor
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Forthcoming
------------
+1.1.2 (2020-05-26)
+------------------
 * Add an external package QD for the spdlog library (`#8 <https://github.com/ros2/spdlog_vendor/issues/8>`_)
 * Remove included extra ament_copyright (`#12 <https://github.com/ros2/spdlog_vendor/issues/12>`_)
 * Enable Copyright linter tests + Add Contributing.md file (`#11 <https://github.com/ros2/spdlog_vendor/issues/11>`_)
