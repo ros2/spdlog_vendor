@@ -2,6 +2,14 @@
 Changelog for package spdlog_vendor
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+Forthcoming
+-----------
+* Add an external package QD for the spdlog library (`#8 <https://github.com/ros2/spdlog_vendor/issues/8>`_)
+* Remove included extra ament_copyright (`#12 <https://github.com/ros2/spdlog_vendor/issues/12>`_)
+* Enable Copyright linter tests + Add Contributing.md file (`#11 <https://github.com/ros2/spdlog_vendor/issues/11>`_)
+* Add quality declaration spdlog_vendor (`#6 <https://github.com/ros2/spdlog_vendor/issues/6>`_)
+* Contributors: Jorge Perez, Scott K Logan
+
 1.1.1 (2020-04-24)
 ------------------
 * Silence warning from GNUInstallDirs on Windows. (`#10 <https://github.com/ros2/spdlog_vendor/issues/10>`_)
