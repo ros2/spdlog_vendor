@@ -108,7 +108,7 @@ Currently nightly test results can be seen here:
 
 ### Vulnerability Disclosure Policy [7.i]
 
-This package does not yet have a Vulnerability Disclosure Policy.
+This package conforms to the Vulnerability Disclosure Policy in [REP-2006](https://www.ros.org/reps/rep-2006.html).
 
 # Current status Summary
 
