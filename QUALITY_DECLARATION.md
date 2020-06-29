@@ -45,10 +45,10 @@ All pull requests will be peer-reviewed, check the [ROS 2 Developer Guide](https
 All pull requests must pass CI on all [tier 1 platforms](https://www.ros.org/reps/rep-2000.html#support-tiers).
 
 Currently nightly results can be seen here:
-* [linux-aarch64_release](https://ci.ros2.org/view/nightly/job/nightly_linux-aarch64_release/lastStableBuild/testReport/spdlog_vendor/)
-* [linux_release](https://ci.ros2.org/view/nightly/job/nightly_linux_release/lastStableBuild/testReport/spdlog_vendor/)
-* [mac_osx_release](https://ci.ros2.org/view/nightly/job/nightly_osx_release/lastStableBuild/testReport/spdlog_vendor/)
-* [windows_release](https://ci.ros2.org/view/nightly/job/nightly_win_rel/lastStableBuild/testReport/spdlog_vendor/)
+* [linux-aarch64_release](https://ci.ros2.org/view/nightly/job/nightly_linux-aarch64_release/lastSuccessfulBuild/testReport/spdlog_vendor/)
+* [linux_release](https://ci.ros2.org/view/nightly/job/nightly_linux_release/lastSuccessfulBuild/testReport/spdlog_vendor/)
+* [mac_osx_release](https://ci.ros2.org/view/nightly/job/nightly_osx_release/lastSuccessfulBuild/testReport/spdlog_vendor/)
+* [windows_release](https://ci.ros2.org/view/nightly/job/nightly_win_rel/lastSuccessfulBuild/testReport/spdlog_vendor/)
 
 ### Documentation Policy [2.v]
 
@@ -68,13 +68,13 @@ All pull requests must resolve related documentation changes before merging.
 
 The license for `spdlog_vendor` is Apache 2.0, and a summary is in each source file, the type is declared in the [`package.xml`](./package.xml) manifest file, and a full copy of the license is in the [LICENSE](./LICENSE) file. The vendored library, `spdlog` license is MIT as stated in its [Quality declaration](./SPDLOG_QUALITY_DECLARATION.md) document (Section 5.iii).
 
-There is an automated test which runs a linter that ensures each file has a license statement. [Here](https://ci.ros2.org/view/nightly/job/nightly_linux-aarch64_release/lastStableBuild/testReport/spdlog_vendor/) can be found a list with the latest results of the various linters being run on the package.
+There is an automated test which runs a linter that ensures each file has a license statement. [Here](https://ci.ros2.org/view/nightly/job/nightly_linux-aarch64_release/lastSuccessfulBuild/testReport/spdlog_vendor/) can be found a list with the latest results of the various linters being run on the package.
 
 ### Copyright Statements [3.iv]
 
 The copyright holders each provide a statement of copyright in each source code file in `spdlog_vendor`.
 
-There is an automated test which runs a linter that ensures each file has at least one copyright statement. Latest linter result report can be seen [here](https://ci.ros2.org/view/nightly/job/nightly_linux-aarch64_release/lastStableBuild/testReport/spdlog_vendor/copyright/).
+There is an automated test which runs a linter that ensures each file has at least one copyright statement. Latest linter result report can be seen [here](https://ci.ros2.org/view/nightly/job/nightly_linux-aarch64_release/lastSuccessfulBuild/testReport/spdlog_vendor/copyright/).
 
 ## Testing [4]
 
@@ -85,10 +85,10 @@ There is an automated test which runs a linter that ensures each file has at lea
 `spdlog_vendor` uses and passes all the ROS2 standard linters and static analysis tools as described in the [ROS 2 Developer Guide](https://index.ros.org/doc/ros2/Contributing/Developer-Guide/#linters-and-static-analysis). Passing implies there are no linter/static errors when testing against CI of supported platforms.
 
 Currently nightly test results can be seen here:
-* [linux-aarch64_release](https://ci.ros2.org/view/nightly/job/nightly_linux-aarch64_release/lastStableBuild/testReport/spdlog_vendor/)
-* [linux_release](https://ci.ros2.org/view/nightly/job/nightly_linux_release/lastStableBuild/testReport/spdlog_vendor/)
-* [mac_osx_release](https://ci.ros2.org/view/nightly/job/nightly_osx_release/lastStableBuild/testReport/spdlog_vendor/)
-* [windows_release](https://ci.ros2.org/view/nightly/job/nightly_win_rel/lastStableBuild/testReport/spdlog_vendor/)
+* [linux-aarch64_release](https://ci.ros2.org/view/nightly/job/nightly_linux-aarch64_release/lastSuccessfulBuild/testReport/spdlog_vendor/)
+* [linux_release](https://ci.ros2.org/view/nightly/job/nightly_linux_release/lastSuccessfulBuild/testReport/spdlog_vendor/)
+* [mac_osx_release](https://ci.ros2.org/view/nightly/job/nightly_osx_release/lastSuccessfulBuild/testReport/spdlog_vendor/)
+* [windows_release](https://ci.ros2.org/view/nightly/job/nightly_win_rel/lastSuccessfulBuild/testReport/spdlog_vendor/)
 
 ## Dependencies [5]
 

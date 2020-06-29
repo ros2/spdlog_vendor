@@ -29,7 +29,7 @@ For the compiled portion of `spdlog`, the `SPDLOG_API` C++ macro indicates the s
 
 ### API Stability Policy [1.iv]
 
-There is no policy for API stability. This is not a problem because the `spdlog_vendor` package importing the `spdlog dependency` is using a fixed version, in this case, the [1.5.0](https://github.com/gabime/spdlog/releases/tag/v1.5.0).
+There is no policy for API stability. However, the vendored package `spdlog_vendor` package importing the `spdlog dependency` is using a fixed version, in this case, the [1.5.0](https://github.com/gabime/spdlog/releases/tag/v1.5.0), which will provide API stability to downstream packages.
 
 ### ABI Stability Policy [1.v]
 
@@ -37,7 +37,7 @@ There is no policy for ABI stability. This is not a problem because the `spdlog_
 
 ### ABI and ABI Stability Within a Released ROS Distribution [1.vi]
 
-There is not a direct correlation between the `spdlog` releases and the ROS distributions, however this is not a problem because the `spdlog_vendor` package importing the `spdlog` dependency is using a fixed version, in this case, the [1.5.0](https://github.com/gabime/spdlog/releases/tag/v1.5.0).
+`spdlog`'s API and ABI stability within a ROS Distribution are maintained by `spdlog_vendor` which pins the specific version of the `spdlog` dependency to a specific version, in this case, [1.5.0](https://github.com/gabime/spdlog/releases/tag/v1.5.0).
 
 ## Change Control Process [2]
 
