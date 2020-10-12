@@ -2,7 +2,7 @@ This document is a declaration of software quality for the `spdlog_vendor` packa
 
 # spdlog_vendor Quality Declaration
 
-The package `spdlog_vendor` claims to be in the **Quality Level 3** category.
+The package `spdlog_vendor` claims to be in the **Quality Level 1** category.
 
 Below are the rationales, notes, and caveats for this claim, organized by each requirement listed in the [Package Quality Categories in REP-2004](https://index.ros.org/doc/ros2/Contributing/Developer-Guide/#package-quality-categories) of the ROS2 developer guide.
 
@@ -22,11 +22,11 @@ This is a vendor package for `spdlog` and as such does not declare its own API.
 
 ### API Stability Policy [1.iv]/[1.vi]
 
-`spdlog_vendor` does not have an API of its own, and will limit its dependency on `spdlog` to API stable releases within a released ROS distribution.
+There is no policy for API stability. This is not a problem because the `spdlog_vendor` package importing the `spdlog dependency` is using a fixed version, in this case, the [1.6.1](https://github.com/gabime/spdlog/releases/tag/v1.6.1).
 
 ### ABI Stability Policy [1.v]/[1.vi]
 
-`spdlog_vendor` does not have an ABI of its own, and will limit its dependency on `spdlog` to ABI stable releases within a released ROS distribution.
+There is no policy for API stability. This is not a problem because the `spdlog_vendor` package importing the `spdlog dependency` is using a fixed version, in this case, the [1.6.1](https://github.com/gabime/spdlog/releases/tag/v1.6.1).
 
 ## Change Control Process [2]
 
@@ -79,6 +79,28 @@ There is an automated test which runs a linter that ensures each file has at lea
 ## Testing [4]
 
 `spdlog_vendor` is a package providing solely CMake files and therefore does not require feature/API tests and has no coverage or performance requirements.
+
+### Feature Testing [4.i]
+
+`spdlog` has some tests included in the Github repository. It can be compiled using a CMake argument `SPDLOG_BUILD_TESTS`. `spdlog_vendor`
+ package importing the `spdlog dependency` is using a fixed version, in this case, the [1.6.1](https://github.com/gabime/spdlog/releases/tag/v1.6.1).
+For this reason tests will be stable during the time.
+
+### Public API Testing [4.ii]
+
+`spdlog` has some tests included in the Github repository. It can be compiled using a CMake argument `SPDLOG_BUILD_TESTS`. `spdlog_vendor`
+ package importing the `spdlog dependency` is using a fixed version, in this case, the [1.6.1](https://github.com/gabime/spdlog/releases/tag/v1.6.1).
+ For this reason tests will be stable during the time.
+
+### Coverage [4.iii]
+
+Lastest code coverage can be found [here](https://ci.ros2.org/job/ci_linux_coverage/lastSuccessfulBuild/cobertura/). `spdlog_vendor`
+ package importing the `spdlog dependency` is using a fixed version, in this case, the [1.6.1](https://github.com/gabime/spdlog/releases/tag/v1.6.1). For this reason coverage will be stable during the time.
+
+### Performance [4.iv]
+
+The `spdlog` package is benchmarked and the most recent test results can be found [here](http://build.ros2.org/view/Rci/job/Rci__benchmark_ubuntu_focal_amd64/BenchmarkTable/). It can be compiled using a CMake argument `DSPDLOG_BUILD_BENCH`. `spdlog_vendor`
+ package importing the `spdlog dependency` is using a fixed version, in this case, the [1.6.1](https://github.com/gabime/spdlog/releases/tag/v1.6.1). For this reason performance will be stable during the time.
 
 ### Linters and Static Analysis [4.v]
 
@@ -153,6 +175,4 @@ The chart below compares the requirements in the REP-2004 with the current state
 |7| Security | --- |
 |7.i| Vulnerability Disclosure Policy | ✓ |
 
-Comparing this table with the [Quality Level Comparison Chart of REP2004](https://github.com/ros-infrastructure/rep/blob/master/rep-2004.rst#quality-level-comparison-chart) lead us to decide that this package qualifies to Quality Level 3.
-
-`spdlog_vendor` is limited by the quality level of the upstream dependency spdlog. In order to reach higher quality levels, the issues limiting `spdlog` will either need to be addressed by `spdlog` itself, or through adequate quality control measures in this package.
+Comparing this table with the [Quality Level Comparison Chart of REP2004](https://github.com/ros-infrastructure/rep/blob/master/rep-2004.rst#quality-level-comparison-chart) lead us to decide that this package qualifies to Quality Level 1.
