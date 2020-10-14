@@ -141,4 +141,4 @@ The `spdlog` documentation states that it is supported on the following platform
 
 ### Vulnerability Disclosure Policy [7.i]
 
-The Vulnerability Disclosure Policy it's defined in the vendored Quality Declaration.
+The Vulnerability Disclosure Policy is defined in the vendored Quality Declaration.
