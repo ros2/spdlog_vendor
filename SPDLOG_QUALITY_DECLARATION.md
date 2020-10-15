@@ -92,15 +92,23 @@ Each of the `spdlog` source files containing code include a copyright statement 
 
 ### Feature Testing [4.i]
 
-Many (if not all) of the advertised features of `spdlog` are tested as part of continuous integration.
+`sdplog` is pinned to a specific version v1.6.1 is the vendor package, for this reason we not including this tests in the continuous integration because the code is not
+going to change. The result of this test can be found here:
+ - [Linux](https://travis-ci.org/github/gabime/spdlog/builds/691497445)
+ - [macOS](https://travis-ci.org/github/gabime/spdlog/builds/691497445)
+ - [Windows](https://ci.appveyor.com/project/gabime/spdlog/builds/33133070)
 
 ### Public API Testing [4.ii]
 
-There is some, but very little testing in `spdlog` specifically focused on API stability.
+`sdplog` is pinned to a specific version v1.6.1 is the vendor package, for this reason we not including this tests in the continuous integration because the code is not
+going to change. The result of this test can be found here:
+ - [Linux](https://travis-ci.org/github/gabime/spdlog/builds/691497445)
+ - [macOS](https://travis-ci.org/github/gabime/spdlog/builds/691497445)
+ - [Windows](https://ci.appveyor.com/project/gabime/spdlog/builds/33133070)
 
 ### Coverage [4.iii]
 
-There is no test coverage tracking in `spdlog`.
+Latest code coverage can be found [here](https://ci.ros2.org/job/ci_linux_coverage/lastSuccessfulBuild/cobertura/).
 
 ### Performance [4.iv]
 
