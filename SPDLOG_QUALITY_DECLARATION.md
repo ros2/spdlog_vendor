@@ -6,7 +6,6 @@ This quality declaration claims that `spdlog` is in the **Quality Level 1** cate
 
 Though `spdlog` meets many of the criteria stated for software quality.
 As `spdlog` itself is not a ROS package, many of these gaps could be reconciled in the vendor package that is used to control `spdlog` distribution within ROS.
-Engagement with the upstream development team to define policies for versioning, API/ABI stability and enforcing peer review would lead to higher quality, and could increase the level category for `spdlog` in a subsequent review.
 
 Below are the rationales, notes, and caveats for this claim, organized by each requirement listed in the [Package Requirements for Quality Level 1 in REP-2004](https://www.ros.org/reps/rep-2004.html).
 
