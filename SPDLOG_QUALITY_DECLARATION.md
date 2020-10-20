@@ -92,23 +92,25 @@ Each of the `spdlog` source files containing code include a copyright statement 
 
 ### Feature Testing [4.i]
 
-`sdplog` is pinned to a specific version v1.6.1 is the vendor package, for this reason we not including this tests in the continuous integration because the code is not
-going to change. The result of this test can be found here:
+Each feature in spdlog has corresponding tests which simulate typical usage, and they are located in link to test source code. The result of these tests can be found at:
  - [Linux](https://travis-ci.org/github/gabime/spdlog/builds/691497445)
  - [macOS](https://travis-ci.org/github/gabime/spdlog/builds/691497445)
  - [Windows](https://ci.appveyor.com/project/gabime/spdlog/builds/33133070)
+
+`spdlog` is pinned to a specific version by its vendor package, so we're fixed to a fixed set of features.
 
 ### Public API Testing [4.ii]
 
-`sdplog` is pinned to a specific version v1.6.1 is the vendor package, for this reason we not including this tests in the continuous integration because the code is not
-going to change. The result of this test can be found here:
+`spdlog` has API tests which simulate typical usage, and they are located in link to test source code. The result of these tests can be found at:
  - [Linux](https://travis-ci.org/github/gabime/spdlog/builds/691497445)
  - [macOS](https://travis-ci.org/github/gabime/spdlog/builds/691497445)
  - [Windows](https://ci.appveyor.com/project/gabime/spdlog/builds/33133070)
 
+`spdlog` is pinned to a specific version by its vendor package, so we're fixed to a fixed API.
+
 ### Coverage [4.iii]
 
-Latest code coverage can be found [here](https://ci.ros2.org/job/ci_linux_coverage/lastSuccessfulBuild/cobertura/).
+ROS 2 is using partially the `spdlog`'s API. Latest code coverage can be found [here](https://ci.ros2.org/job/ci_linux_coverage/lastSuccessfulBuild/cobertura/). The result shows the API that is being used in the ROS 2 codebase.
 
 ### Performance [4.iv]
 
