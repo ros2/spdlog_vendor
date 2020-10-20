@@ -110,7 +110,7 @@ Each feature in spdlog has corresponding tests which simulate typical usage, and
 
 ### Coverage [4.iii]
 
-ROS 2 is using partially the `spdlog`'s API. Latest code coverage can be found [here](https://ci.ros2.org/job/ci_linux_coverage/lastSuccessfulBuild/cobertura/). The result shows the API that is being used in the ROS 2 codebase.
+ROS 2 is only using part of `spdlog`'s API. Latest code coverage can be found [here](https://ci.ros2.org/job/ci_linux_coverage/lastSuccessfulBuild/cobertura/). The result shows the API that is being used in the ROS 2 codebase.
 
 ### Performance [4.iv]
 
