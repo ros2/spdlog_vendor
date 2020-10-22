@@ -114,6 +114,13 @@ ROS 2 is only using part of `spdlog`'s API. Latest code coverage can be found [h
 
 In particular ROS 2 is using the [logger class](https://github.com/gabime/spdlog/blob/v1.x/include/spdlog/logger.h#L46), the [pattern formatter](https://github.com/gabime/spdlog/blob/v1.x/include/spdlog/pattern_formatter-inl.h) and the [basic sink](https://github.com/gabime/spdlog/blob/v1.x/include/spdlog/sinks/base_sink-inl.h).
 
+Tests are located [here](https://github.com/gabime/spdlog/blob/v1.6.1/tests/). In particular there are some of then which coverages the used API, for example
+
+  - [Pattern formatter test](https://github.com/gabime/spdlog/blob/v1.6.1/tests/test_pattern_formatter.cpp)
+  - [Sink tests](https://github.com/gabime/spdlog/blob/v1.6.1/tests/test_sink.h)
+
+In the `rcl_logging_spdlog` package there are some tests that are covering the used API. These tests are located [here](https://github.com/ros2/rcl_logging/tree/master/rcl_logging_spdlog/test).
+
 ### Performance [4.iv]
 
 Performance tests for `spdlog` can be built by specifying the `SPDLOG_BUILD_BENCH` CMake option.
