@@ -92,7 +92,7 @@ Each of the `spdlog` source files containing code include a copyright statement 
 
 ### Feature Testing [4.i]
 
-Each feature in spdlog has corresponding tests which simulate typical usage, and they are located in link to test source code. The result of these tests can be found at:
+Each feature in spdlog has corresponding tests which simulate typical usage, and they are located [here](https://github.com/gabime/spdlog/blob/v1.6.1/tests/). The result of these tests can be found at:
  - [Linux](https://travis-ci.org/github/gabime/spdlog/builds/691497445)
  - [macOS](https://travis-ci.org/github/gabime/spdlog/builds/691497445)
  - [Windows](https://ci.appveyor.com/project/gabime/spdlog/builds/33133070)
