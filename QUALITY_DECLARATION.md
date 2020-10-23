@@ -22,11 +22,11 @@ This is a vendor package for `spdlog` and as such does not declare its own API.
 
 ### API Stability Policy [1.iv]/[1.vi]
 
-There is no policy for API stability. This is not a problem because the `spdlog_vendor` package importing the `spdlog dependency` is using a fixed version, in this case, [1.6.1](https://github.com/gabime/spdlog/releases/tag/v1.6.1).
+There is no policy for API stability. This is not a problem because the `spdlog_vendor` package importing the `spdlog` dependency is using a fixed version, in this case, [1.6.1](https://github.com/gabime/spdlog/releases/tag/v1.6.1).
 
 ### ABI Stability Policy [1.v]/[1.vi]
 
-There is no policy for ABI stability. This is not a problem because the `spdlog_vendor` package importing the `spdlog dependency` is using a fixed version, in this case, [1.6.1](https://github.com/gabime/spdlog/releases/tag/v1.6.1).
+There is no policy for ABI stability. This is not a problem because the `spdlog_vendor` package importing the `spdlog` dependency is using a fixed version, in this case, [1.6.1](https://github.com/gabime/spdlog/releases/tag/v1.6.1).
 
 ## Change Control Process [2]
 

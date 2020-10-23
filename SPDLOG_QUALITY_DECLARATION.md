@@ -29,7 +29,7 @@ For the compiled portion of `spdlog`, the `SPDLOG_API` C++ macro indicates the s
 
 ### API Stability Policy [1.iv]
 
-There is no policy for API stability. However, the vendored package `spdlog_vendor` package importing the `spdlog dependency` is using a fixed version, in this case [1.6.1](https://github.com/gabime/spdlog/releases/tag/v1.6.1), which will provide API stability to downstream packages.
+There is no policy for API stability. However, the vendored package `spdlog_vendor` package importing the `spdlog` dependency is using a fixed version, in this case [1.6.1](https://github.com/gabime/spdlog/releases/tag/v1.6.1), which will provide API stability to downstream packages.
 
 ### ABI Stability Policy [1.v]
 
@@ -114,7 +114,7 @@ ROS 2 is only using part of `spdlog`'s API. Latest code coverage can be found [h
 
 In particular ROS 2 is using the [logger class](https://github.com/gabime/spdlog/blob/v1.x/include/spdlog/logger.h#L46), the [pattern formatter](https://github.com/gabime/spdlog/blob/v1.x/include/spdlog/pattern_formatter-inl.h) and the [basic sink](https://github.com/gabime/spdlog/blob/v1.x/include/spdlog/sinks/base_sink-inl.h).
 
-Tests are located [here](https://github.com/gabime/spdlog/blob/v1.6.1/tests/). In particular there are some of then which coverages the used API, for example
+Tests are located [here](https://github.com/gabime/spdlog/blob/v1.6.1/tests/). In particular there are some of them which cover the used API, for example:
 
   - [Pattern formatter test](https://github.com/gabime/spdlog/blob/v1.6.1/tests/test_pattern_formatter.cpp)
   - [Sink tests](https://github.com/gabime/spdlog/blob/v1.6.1/tests/test_sink.h)
