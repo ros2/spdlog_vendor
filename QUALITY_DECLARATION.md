@@ -2,7 +2,7 @@ This document is a declaration of software quality for the `spdlog_vendor` packa
 
 # spdlog_vendor Quality Declaration
 
-The package `spdlog_vendor` claims to be in the **Quality Level 3** category.
+The package `spdlog_vendor` claims to be in the **Quality Level 1** category.
 
 Below are the rationales, notes, and caveats for this claim, organized by each requirement listed in the [Package Quality Categories in REP-2004](https://index.ros.org/doc/ros2/Contributing/Developer-Guide/#package-quality-categories) of the ROS2 developer guide.
 
@@ -22,11 +22,11 @@ This is a vendor package for `spdlog` and as such does not declare its own API.
 
 ### API Stability Policy [1.iv]/[1.vi]
 
-`spdlog_vendor` does not have an API of its own, and will limit its dependency on `spdlog` to API stable releases within a released ROS distribution.
+There is no policy for API stability. This is not a problem because the `spdlog_vendor` package importing the `spdlog` dependency is using a fixed version, in this case, [1.6.1](https://github.com/gabime/spdlog/releases/tag/v1.6.1).
 
 ### ABI Stability Policy [1.v]/[1.vi]
 
-`spdlog_vendor` does not have an ABI of its own, and will limit its dependency on `spdlog` to ABI stable releases within a released ROS distribution.
+There is no policy for ABI stability. This is not a problem because the `spdlog_vendor` package importing the `spdlog` dependency is using a fixed version, in this case, [1.6.1](https://github.com/gabime/spdlog/releases/tag/v1.6.1).
 
 ## Change Control Process [2]
 
@@ -79,6 +79,22 @@ There is an automated test which runs a linter that ensures each file has at lea
 ## Testing [4]
 
 `spdlog_vendor` is a package providing solely CMake files and therefore does not require feature/API tests and has no coverage or performance requirements.
+
+### Feature Testing [4.i]
+
+`spdlog_vendor` doesn't require feature tests, they aren't needed since the vendor package only imports an external library.
+
+### Public API Testing [4.ii]
+
+`spdlog_vendor` doesn't require public API tests, they aren't needed since the vendor package only imports an external library.
+
+### Coverage [4.iii]
+
+`spdlog_vendor` doesn't require code coverage, they aren't needed since the vendor package only imports an external library.
+
+### Performance [4.iv]
+
+`spdlog_vendor` doesn't require performance tests, they aren't needed since the vendor package only imports an external library.
 
 ### Linters and Static Analysis [4.v]
 
@@ -153,6 +169,4 @@ The chart below compares the requirements in the REP-2004 with the current state
 |7| Security | --- |
 |7.i| Vulnerability Disclosure Policy | ✓ |
 
-Comparing this table with the [Quality Level Comparison Chart of REP2004](https://github.com/ros-infrastructure/rep/blob/master/rep-2004.rst#quality-level-comparison-chart) lead us to decide that this package qualifies to Quality Level 3.
-
-`spdlog_vendor` is limited by the quality level of the upstream dependency spdlog. In order to reach higher quality levels, the issues limiting `spdlog` will either need to be addressed by `spdlog` itself, or through adequate quality control measures in this package.
+Comparing this table with the [Quality Level Comparison Chart of REP2004](https://github.com/ros-infrastructure/rep/blob/master/rep-2004.rst#quality-level-comparison-chart) lead us to decide that this package qualifies as Quality Level 1.

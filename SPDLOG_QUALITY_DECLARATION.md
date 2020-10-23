@@ -2,13 +2,13 @@ This document is a declaration of software quality for the `spdlog` external dep
 
 # `spdlog` Quality Declaration
 
-This quality declaration claims that `spdlog` is in the **Quality Level 4** category.
+This quality declaration claims that `spdlog` is in the **Quality Level 1** category.
 
-Though `spdlog` meets many of the criteria stated for software quality, there are key points preventing it from achieving a higher level category.
-As `spdlog` itself is not a ROS package, many of these gaps could be reconciled in the vendor package that is used to control `spdlog` distribution within ROS.
-Engagement with the upstream development team to define policies for versioning, API/ABI stability and enforcing peer review would lead to higher quality, and could increase the level category for `spdlog` in a subsequent review.
+The upstream code of `spdlog` meets many, but not all of the criteria stated for Quality Level 1.
+As `spdlog` is not a ROS package, these gaps are reconciled in the vendor package within ROS 2.
+See [QUALITY_DECLARATION.md](./QUALITY_DECLARATION.md) for more details.
 
-Below are the rationales, notes, and caveats for this claim, organized by each requirement listed in the [Package Requirements for Quality Level 4 in REP-2004](https://www.ros.org/reps/rep-2004.html).
+Below are the rationales, notes, and caveats for this claim, organized by each requirement listed in the [Package Requirements for Quality Level 1 in REP-2004](https://www.ros.org/reps/rep-2004.html).
 
 ## Version Policy [1]
 
@@ -29,15 +29,15 @@ For the compiled portion of `spdlog`, the `SPDLOG_API` C++ macro indicates the s
 
 ### API Stability Policy [1.iv]
 
-There is no policy for API stability. However, the vendored package `spdlog_vendor` package importing the `spdlog dependency` is using a fixed version, in this case [1.5.0](https://github.com/gabime/spdlog/releases/tag/v1.5.0), which will provide API stability to downstream packages.
+There is no policy for API stability. However, the vendored package `spdlog_vendor` package importing the `spdlog` dependency is using a fixed version, in this case [1.6.1](https://github.com/gabime/spdlog/releases/tag/v1.6.1), which will provide API stability to downstream packages.
 
 ### ABI Stability Policy [1.v]
 
-There is no policy for ABI stability. This is not a problem because the `spdlog_vendor` package importing the `spdlog` dependency is using a fixed version, in this case [1.5.0](https://github.com/gabime/spdlog/releases/tag/v1.5.0).
+There is no policy for ABI stability. This is not a problem because the `spdlog_vendor` package importing the `spdlog` dependency is using a fixed version, in this case [1.6.1](https://github.com/gabime/spdlog/releases/tag/v1.6.1).
 
 ### ABI and ABI Stability Within a Released ROS Distribution [1.vi]
 
-`spdlog`'s API and ABI stability within a ROS Distribution are maintained by `spdlog_vendor` which pins the `spdlog` dependency to a specific version, in this case [1.5.0](https://github.com/gabime/spdlog/releases/tag/v1.5.0).
+`spdlog`'s API and ABI stability within a ROS Distribution are maintained by `spdlog_vendor` which pins the `spdlog` dependency to a specific version, in this case [1.6.1](https://github.com/gabime/spdlog/releases/tag/v1.6.1).
 
 ## Change Control Process [2]
 
@@ -92,15 +92,34 @@ Each of the `spdlog` source files containing code include a copyright statement 
 
 ### Feature Testing [4.i]
 
-Many (if not all) of the advertised features of `spdlog` are tested as part of continuous integration.
+Each feature in spdlog has corresponding tests which simulate typical usage, and they are located [here](https://github.com/gabime/spdlog/blob/v1.6.1/tests/). The result of these tests can be found at:
+ - [Linux](https://travis-ci.org/github/gabime/spdlog/builds/691497445)
+ - [macOS](https://travis-ci.org/github/gabime/spdlog/builds/691497445)
+ - [Windows](https://ci.appveyor.com/project/gabime/spdlog/builds/33133070)
+
+`spdlog` is pinned to a specific version by its vendor package, so we're fixed to a fixed set of features.
 
 ### Public API Testing [4.ii]
 
-There is some, but very little testing in `spdlog` specifically focused on API stability.
+`spdlog` has API tests which simulate typical usage, and they are located in link to test source code. The result of these tests can be found at:
+ - [Linux](https://travis-ci.org/github/gabime/spdlog/builds/691497445)
+ - [macOS](https://travis-ci.org/github/gabime/spdlog/builds/691497445)
+ - [Windows](https://ci.appveyor.com/project/gabime/spdlog/builds/33133070)
+
+`spdlog` is pinned to a specific version by its vendor package, so we're fixed to a fixed API.
 
 ### Coverage [4.iii]
 
-There is no test coverage tracking in `spdlog`.
+ROS 2 is only using part of `spdlog`'s API. Latest code coverage can be found [here](https://ci.ros2.org/job/ci_linux_coverage/lastSuccessfulBuild/cobertura/). The result shows the API that is being used in the ROS 2 codebase.
+
+In particular ROS 2 is using the [logger class](https://github.com/gabime/spdlog/blob/v1.x/include/spdlog/logger.h#L46), the [pattern formatter](https://github.com/gabime/spdlog/blob/v1.x/include/spdlog/pattern_formatter-inl.h) and the [basic sink](https://github.com/gabime/spdlog/blob/v1.x/include/spdlog/sinks/base_sink-inl.h).
+
+Tests are located [here](https://github.com/gabime/spdlog/blob/v1.6.1/tests/). In particular there are some of them which cover the used API, for example:
+
+  - [Pattern formatter test](https://github.com/gabime/spdlog/blob/v1.6.1/tests/test_pattern_formatter.cpp)
+  - [Sink tests](https://github.com/gabime/spdlog/blob/v1.6.1/tests/test_sink.h)
+
+In the `rcl_logging_spdlog` package there are some tests that are covering the used API. These tests are located [here](https://github.com/ros2/rcl_logging/tree/master/rcl_logging_spdlog/test).
 
 ### Performance [4.iv]
 
@@ -141,4 +160,4 @@ The `spdlog` documentation states that it is supported on the following platform
 
 ### Vulnerability Disclosure Policy [7.i]
 
-There is no Vulnerability Disclosure Policy for `spdlog`.
+The Vulnerability Disclosure Policy is defined in the vendored Quality Declaration.
