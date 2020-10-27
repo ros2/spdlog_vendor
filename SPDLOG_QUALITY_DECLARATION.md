@@ -119,7 +119,7 @@ Tests are located [here](https://github.com/gabime/spdlog/blob/v1.6.1/tests/). I
   - [Pattern formatter test](https://github.com/gabime/spdlog/blob/v1.6.1/tests/test_pattern_formatter.cpp)
   - [Sink tests](https://github.com/gabime/spdlog/blob/v1.6.1/tests/test_sink.h)
 
-In the `rcl_logging_spdlog` package there are some tests that are covering the used API. These tests are located [here](https://github.com/ros2/rcl_logging/tree/master/rcl_logging_spdlog/test).
+In the `rcl_logging_spdlog` package there are some tests that are covering the used API. These tests are located [here](https://github.com/ros2/rcl_logging/tree/foxy/rcl_logging_spdlog/test).
 
 ### Performance [4.iv]
 
