@@ -2,8 +2,8 @@
 Changelog for package spdlog_vendor
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Forthcoming
------------
+1.2.0 (2020-12-08)
+------------------
 * Updated QD to 1 (`#16 <https://github.com/ros2/spdlog_vendor/issues/16>`_)
 * bump spdlog version to 1.6.1 (`#15 <https://github.com/ros2/spdlog_vendor/issues/15>`_)
 * Bump QD to level 3 and updated QD (`#14 <https://github.com/ros2/spdlog_vendor/issues/14>`_)
