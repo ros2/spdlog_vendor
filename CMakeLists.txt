@@ -53,7 +53,6 @@ macro(build_spdlog)
   endif()
 
   include(ExternalProject)
-  find_package(Patch REQUIRED)
 
   # Get spdlog 1.6.1
   externalproject_add(spdlog-1.6.1
