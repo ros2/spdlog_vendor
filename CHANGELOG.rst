@@ -2,8 +2,8 @@
 Changelog for package spdlog_vendor
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Forthcoming
------------
+1.2.1 (2021-01-25)
+------------------
 * Remove unnecessary call to find_package(PATCH) (`#18 <https://github.com/ros2/spdlog_vendor/issues/18>`_)
 * Contributors: Chris Lalancette
 
