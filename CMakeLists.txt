@@ -50,6 +50,7 @@ macro(build_spdlog)
   list(APPEND extra_cmake_args "-DSPDLOG_BUILD_EXAMPLE=OFF")
   if(NOT WIN32)
     list(APPEND extra_cmake_args "-DSPDLOG_BUILD_SHARED=ON")
+    list(APPEND extra_cmake_args "-DCMAKE_INSTALL_LIBDIR=lib")
   endif()
 
   include(ExternalProject)
