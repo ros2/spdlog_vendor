@@ -78,7 +78,6 @@ if(NOT spdlog_FOUND OR "${spdlog_VERSION}" VERSION_LESS 1.5.0)
   build_spdlog()
 endif()
 
-# TODO(blast545): This section and package.xml should be updated once copyright auto is solved. See: https://github.com/ament/ament_lint/issues/237
 if(BUILD_TESTING)
   find_package(ament_lint_auto REQUIRED)
   ament_lint_auto_find_test_dependencies()
