@@ -2,6 +2,12 @@
 Changelog for package spdlog_vendor
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+Forthcoming
+-----------
+* Remove a stale TODO (`#22 <https://github.com/ros2/spdlog_vendor/issues/22>`_)
+* Always preserve source permissions in vendor packages (`#20 <https://github.com/ros2/spdlog_vendor/issues/20>`_)
+* Contributors: Scott K Logan
+
 1.2.1 (2021-01-25)
 ------------------
 * Remove unnecessary call to find_package(PATCH) (`#18 <https://github.com/ros2/spdlog_vendor/issues/18>`_)
