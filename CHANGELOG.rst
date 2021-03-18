@@ -2,8 +2,8 @@
 Changelog for package spdlog_vendor
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Forthcoming
------------
+1.2.2 (2021-03-18)
+------------------
 * Remove a stale TODO (`#22 <https://github.com/ros2/spdlog_vendor/issues/22>`_)
 * Always preserve source permissions in vendor packages (`#20 <https://github.com/ros2/spdlog_vendor/issues/20>`_)
 * Contributors: Scott K Logan
