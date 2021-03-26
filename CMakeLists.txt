@@ -74,7 +74,7 @@ macro(build_spdlog)
   )
 endmacro()
 
-if(NOT spdlog_FOUND OR "${spdlog_VERSION}" VERSION_LESS 1.8.2)
+if(NOT spdlog_FOUND OR "${spdlog_VERSION}" VERSION_LESS 1.5.0)
   build_spdlog()
 endif()
 
