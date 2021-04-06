@@ -2,6 +2,12 @@
 Changelog for package spdlog_vendor
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+Forthcoming
+-----------
+* updating quality declaration links (re: `ros2/docs.ros2.org#52 <https://github.com/ros2/docs.ros2.org/issues/52>`_) (`#24 <https://github.com/ros2/spdlog_vendor/issues/24>`_)
+* Update to spdlog 1.8.2 (`#23 <https://github.com/ros2/spdlog_vendor/issues/23>`_)
+* Contributors: Chris Lalancette, shonigmann
+
 1.2.2 (2021-03-18)
 ------------------
 * Remove a stale TODO (`#22 <https://github.com/ros2/spdlog_vendor/issues/22>`_)
