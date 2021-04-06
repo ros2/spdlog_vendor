@@ -2,8 +2,8 @@
 Changelog for package spdlog_vendor
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Forthcoming
------------
+1.3.0 (2021-04-06)
+------------------
 * updating quality declaration links (re: `ros2/docs.ros2.org#52 <https://github.com/ros2/docs.ros2.org/issues/52>`_) (`#24 <https://github.com/ros2/spdlog_vendor/issues/24>`_)
 * Update to spdlog 1.8.2 (`#23 <https://github.com/ros2/spdlog_vendor/issues/23>`_)
 * Contributors: Chris Lalancette, shonigmann
