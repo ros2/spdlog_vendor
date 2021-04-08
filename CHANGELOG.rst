@@ -2,6 +2,14 @@
 Changelog for package spdlog_vendor
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+1.1.3 (2021-04-08)
+------------------
+* Update quality declaration links (re: `ros2/docs.ros2.org#52 <https://github.com/ros2/docs.ros2.org/issues/52>`_) (`#25 <https://github.com/ros2/spdlog_vendor/issues/25>`_)
+* Updated QD links to foxy
+* Updated QD to 1 (`#16 <https://github.com/ros2/spdlog_vendor/issues/16>`_)
+* Add Security Vulnerability Policy pointing to REP-2006. (`#13 <https://github.com/ros2/spdlog_vendor/issues/13>`_)
+* Contributors: Alejandro Hernández Cordero, Chris Lalancette, Simon Honigmann
+
 1.1.2 (2020-05-26)
 ------------------
 * Add an external package QD for the spdlog library (`#8 <https://github.com/ros2/spdlog_vendor/issues/8>`_)
