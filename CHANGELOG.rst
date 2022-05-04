@@ -2,6 +2,9 @@
 Changelog for package spdlog_vendor
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+1.4.0 (2022-05-04)
+------------------
+
 1.3.0 (2021-04-06)
 ------------------
 * updating quality declaration links (re: `ros2/docs.ros2.org#52 <https://github.com/ros2/docs.ros2.org/issues/52>`_) (`#24 <https://github.com/ros2/spdlog_vendor/issues/24>`_)
