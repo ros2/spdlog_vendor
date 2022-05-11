@@ -9,9 +9,10 @@
     Wrapper around spdlog, providing nothing but a dependency on spdlog, on some systems.
     On others, it provides an ExternalProject build of spdlog.
   </description>
-  <maintainer email="clalancette@openrobotics.org">Chris Lalancette</maintainer>
+  <maintainer email="dharini@openrobotics.org">Dharini Dutia</maintainer>
   <license>Apache License 2.0</license>  <!-- the contents of this package are Apache 2.0 -->
   <license>MIT</license>  <!-- spdlog is MIT -->
+  <author email="clalancette@openrobotics.org">Chris Lalancette</author>
 
   <url type="website">https://github.com/gabime/spdlog</url>
 
