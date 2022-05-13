@@ -12,9 +12,10 @@
   <maintainer email="dharini@openrobotics.org">Dharini Dutia</maintainer>
   <license>Apache License 2.0</license>  <!-- the contents of this package are Apache 2.0 -->
   <license>MIT</license>  <!-- spdlog is MIT -->
-  <author email="clalancette@openrobotics.org">Chris Lalancette</author>
 
   <url type="website">https://github.com/gabime/spdlog</url>
+
+  <author email="clalancette@openrobotics.org">Chris Lalancette</author>
 
   <buildtool_depend>ament_cmake</buildtool_depend>
 
