@@ -3,6 +3,7 @@ cmake_minimum_required(VERSION 3.5)
 project(spdlog_vendor)
 
 find_package(ament_cmake REQUIRED)
+ament_add_default_options()
 
 option(FORCE_BUILD_VENDOR_PKG
   "Build spdlog from source, even if system-installed package is available"
