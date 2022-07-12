@@ -3,6 +3,7 @@ cmake_minimum_required(VERSION 3.5)
 project(spdlog_vendor)
 
 find_package(ament_cmake REQUIRED)
+ament_add_default_options()
 
 option(FORCE_BUILD_VENDOR_PKG
   "Build spdlog from source, even if system-installed package is available"
@@ -48,7 +49,7 @@ macro(build_spdlog)
   list(APPEND extra_cmake_args "-DCMAKE_CXX_FLAGS=${CMAKE_CXX_FLAGS}")
   list(APPEND extra_cmake_args "-DSPDLOG_BUILD_TESTS=OFF")
   list(APPEND extra_cmake_args "-DSPDLOG_BUILD_EXAMPLE=OFF")
-  if(NOT WIN32)
+  if(NOT WIN32 AND BUILD_SHARED_LIBS)
     list(APPEND extra_cmake_args "-DSPDLOG_BUILD_SHARED=ON")
   endif()
 
