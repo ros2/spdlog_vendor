@@ -2,8 +2,8 @@
 Changelog for package spdlog_vendor
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Forthcoming
------------
+1.4.1 (2022-09-13)
+------------------
 * Fixes policy CMP0135 warning for CMake >= 3.24 (`#30 <https://github.com/ros2/spdlog_vendor/issues/30>`_)
 * build shared lib only if BUILD_SHARED_LIBS is set (`#29 <https://github.com/ros2/spdlog_vendor/issues/29>`_)
 * Mirror rolling to master
