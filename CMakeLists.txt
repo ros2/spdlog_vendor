@@ -60,10 +60,9 @@ macro(build_spdlog)
 
   include(ExternalProject)
 
-  # Get spdlog 1.8.2
-  externalproject_add(spdlog-1.8.2
-    URL https://github.com/gabime/spdlog/archive/v1.8.2.tar.gz
-    URL_MD5 22518fb28d4be66c92a703c67d99b1d1
+  externalproject_add(spdlog-1.9.1
+    URL https://github.com/gabime/spdlog/archive/v1.9.1.tar.gz
+    URL_MD5 97d556dd35dbc362e05a2e74a33f6d93
     TIMEOUT 600
     CMAKE_ARGS
       -DCMAKE_INSTALL_PREFIX=${CMAKE_CURRENT_BINARY_DIR}/${PROJECT_NAME}_install
@@ -86,6 +85,9 @@ endif()
 
 if(BUILD_TESTING)
   find_package(ament_lint_auto REQUIRED)
+  list(APPEND AMENT_LINT_AUTO_EXCLUDE
+    ament_cmake_cppcheck
+  )
   ament_lint_auto_find_test_dependencies()
 endif()
 
