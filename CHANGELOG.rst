@@ -2,8 +2,8 @@
 Changelog for package spdlog_vendor
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Forthcoming
------------
+1.4.2 (2022-11-02)
+------------------
 * Update to spdlog 1.9.1 (`#27 <https://github.com/ros2/spdlog_vendor/issues/27>`_)
 * Contributors: Chris Lalancette
 
