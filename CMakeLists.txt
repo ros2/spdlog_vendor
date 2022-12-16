@@ -4,6 +4,11 @@ project(spdlog_vendor)
 
 find_package(ament_cmake REQUIRED)
 
+# Avoid DOWNLOAD_EXTRACT_TIMESTAMP warning for CMake >= 3.24
+if(POLICY CMP0135)
+  cmake_policy(SET CMP0135 NEW)
+endif()
+
 option(FORCE_BUILD_VENDOR_PKG
   "Build spdlog from source, even if system-installed package is available"
   OFF)
