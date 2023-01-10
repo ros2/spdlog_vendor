@@ -2,6 +2,11 @@
 Changelog for package spdlog_vendor
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+1.3.1 (2023-01-10)
+------------------
+* Fixes policy CMP0135 warning for CMake >= 3.24 (`#30 <https://github.com/ros2/spdlog_vendor/issues/30>`_) (`#32 <https://github.com/ros2/spdlog_vendor/issues/32>`_)
+* Contributors: mergify[bot]
+
 1.3.0 (2021-04-06)
 ------------------
 * updating quality declaration links (re: `ros2/docs.ros2.org#52 <https://github.com/ros2/docs.ros2.org/issues/52>`_) (`#24 <https://github.com/ros2/spdlog_vendor/issues/24>`_)
