@@ -1,87 +1,23 @@
-cmake_minimum_required(VERSION 3.5)
-
-project(spdlog_vendor)
+cmake_minimum_required(VERSION 3.10)
+project(spdlog_vendor CXX)
 
 find_package(ament_cmake REQUIRED)
-ament_add_default_options()
+find_package(ament_cmake_vendor_package REQUIRED)
 
-# Avoid DOWNLOAD_EXTRACT_TIMESTAMP warning for CMake >= 3.24
-if(POLICY CMP0135)
-  cmake_policy(SET CMP0135 NEW)
-endif()
+find_package(spdlog 1.5.0 QUIET)
 
-option(FORCE_BUILD_VENDOR_PKG
-  "Build spdlog from source, even if system-installed package is available"
-  OFF)
+# While most CMake projects build shared libraries by default, it appears that
+# spdlog needs to be told to do so explicitly.
+set(BUILD_SHARED_LIBS TRUE CACHE BOOL "Build shared libraries")
 
-if(NOT FORCE_BUILD_VENDOR_PKG)
-  find_package(spdlog QUIET)
-endif()
-
-macro(build_spdlog)
-  set(extra_cmake_args)
-  if(DEFINED CMAKE_BUILD_TYPE)
-    list(APPEND extra_cmake_args -DCMAKE_BUILD_TYPE=${CMAKE_BUILD_TYPE})
-  endif()
-  if(DEFINED CMAKE_TOOLCHAIN_FILE)
-    list(APPEND extra_cmake_args "-DCMAKE_TOOLCHAIN_FILE=${CMAKE_TOOLCHAIN_FILE}")
-    if(ANDROID)
-      if(DEFINED ANDROID_ABI)
-        list(APPEND extra_cmake_args "-DANDROID_ABI=${ANDROID_ABI}")
-      endif()
-      if(DEFINED ANDROID_CPP_FEATURES)
-        list(APPEND extra_cmake_args "-DANDROID_CPP_FEATURES=${ANDROID_CPP_FEATURES}")
-      endif()
-      if(DEFINED ANDROID_FUNCTION_LEVEL_LINKING)
-        list(APPEND extra_cmake_args "-DANDROID_FUNCTION_LEVEL_LINKING=${ANDROID_FUNCTION_LEVEL_LINKING}")
-      endif()
-      if(DEFINED ANDROID_NATIVE_API_LEVEL)
-        list(APPEND extra_cmake_args "-DANDROID_NATIVE_API_LEVEL=${ANDROID_NATIVE_API_LEVEL}")
-      endif()
-      if(DEFINED ANDROID_NDK)
-        list(APPEND extra_cmake_args "-DANDROID_NDK=${ANDROID_NDK}")
-      endif()
-      if(DEFINED ANDROID_STL)
-        list(APPEND extra_cmake_args "-DANDROID_STL=${ANDROID_STL}")
-      endif()
-      if(DEFINED ANDROID_TOOLCHAIN_NAME)
-        list(APPEND extra_cmake_args "-DANDROID_TOOLCHAIN_NAME=${ANDROID_TOOLCHAIN_NAME}")
-      endif()
-    endif()
-  else()
-    list(APPEND extra_cmake_args "-DCMAKE_CXX_COMPILER=${CMAKE_CXX_COMPILER}")
-  endif()
-  list(APPEND extra_cmake_args "-DCMAKE_CXX_FLAGS=${CMAKE_CXX_FLAGS}")
-  list(APPEND extra_cmake_args "-DSPDLOG_BUILD_TESTS=OFF")
-  list(APPEND extra_cmake_args "-DSPDLOG_BUILD_EXAMPLE=OFF")
-  if(NOT WIN32 AND BUILD_SHARED_LIBS)
-    list(APPEND extra_cmake_args "-DSPDLOG_BUILD_SHARED=ON")
-  endif()
-
-  include(ExternalProject)
-
-  externalproject_add(spdlog-1.9.2
-    URL https://github.com/gabime/spdlog/archive/v1.9.2.tar.gz
-    URL_MD5 cee7f3d31178a00791d7a22c6738df6d
-    TIMEOUT 600
-    CMAKE_ARGS
-      -DCMAKE_INSTALL_PREFIX=${CMAKE_CURRENT_BINARY_DIR}/${PROJECT_NAME}_install
-      ${extra_cmake_args}
-  )
-
-  # The external project will install to the build folder, but we'll install that on make install.
-  install(
-    DIRECTORY
-      ${CMAKE_CURRENT_BINARY_DIR}/${PROJECT_NAME}_install/
-    DESTINATION
-      ${CMAKE_INSTALL_PREFIX}
-    USE_SOURCE_PERMISSIONS
-  )
-endmacro()
-
-if(NOT spdlog_FOUND OR "${spdlog_VERSION}" VERSION_LESS 1.5.0)
-  build_spdlog()
-endif()
+ament_vendor(spdlog_vendor
+  SATISFIED ${spdlog_FOUND}
+  VCS_URL https://github.com/gabime/spdlog.git
+  VCS_VERSION v1.9.2
+  CMAKE_ARGS
+    -DSPDLOG_BUILD_TESTS:BOOL=OFF
+    -DSPDLOG_BUILD_EXAMPLE:BOOL=OFF
+)
 
 if(BUILD_TESTING)
   find_package(ament_lint_auto REQUIRED)
@@ -91,5 +27,4 @@ if(BUILD_TESTING)
   ament_lint_auto_find_test_dependencies()
 endif()
 
-# this ensures that the package has an environment hook setting the PATH
 ament_package()
