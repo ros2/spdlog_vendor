@@ -2,8 +2,8 @@
 Changelog for package spdlog_vendor
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Forthcoming
------------
+1.4.3 (2023-02-13)
+------------------
 * [rolling] Update maintainers - 2022-11-07 (`#31 <https://github.com/ros2/spdlog_vendor/issues/31>`_)
 * Contributors: Audrow Nash
 
