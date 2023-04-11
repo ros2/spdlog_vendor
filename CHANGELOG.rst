@@ -2,6 +2,11 @@
 Changelog for package spdlog_vendor
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+1.4.4 (2023-04-11)
+------------------
+* Update to spdlog 1.9.2 (`#33 <https://github.com/ros2/spdlog_vendor/issues/33>`_)
+* Contributors: Scott K Logan
+
 1.4.3 (2023-02-13)
 ------------------
 * [rolling] Update maintainers - 2022-11-07 (`#31 <https://github.com/ros2/spdlog_vendor/issues/31>`_)
