@@ -2,6 +2,11 @@
 Changelog for package spdlog_vendor
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+Forthcoming
+-----------
+* Switch to ament_cmake_vendor_package (`#34 <https://github.com/ros2/spdlog_vendor/issues/34>`_)
+* Contributors: Scott K Logan
+
 1.5.0 (2023-04-28)
 ------------------
 
