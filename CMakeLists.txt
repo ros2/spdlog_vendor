@@ -13,7 +13,7 @@ set(BUILD_SHARED_LIBS TRUE CACHE BOOL "Build shared libraries")
 ament_vendor(spdlog_vendor
   SATISFIED ${spdlog_FOUND}
   VCS_URL https://github.com/gabime/spdlog.git
-  VCS_VERSION v1.9.2
+  VCS_VERSION v1.12.0
   CMAKE_ARGS
     -DSPDLOG_BUILD_TESTS:BOOL=OFF
     -DSPDLOG_BUILD_EXAMPLE:BOOL=OFF
