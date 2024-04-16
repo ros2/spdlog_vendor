@@ -2,8 +2,8 @@
 Changelog for package spdlog_vendor
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Forthcoming
------------
+1.6.0 (2024-04-16)
+------------------
 * Upgrade to v1.12.0. (`#35 <https://github.com/ros2/spdlog_vendor/issues/35>`_)
 * Contributors: Marco A. Gutierrez
 
