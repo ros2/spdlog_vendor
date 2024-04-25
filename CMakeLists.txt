@@ -10,6 +10,10 @@ find_package(spdlog 1.5.0 QUIET)
 # spdlog needs to be told to do so explicitly.
 set(BUILD_SHARED_LIBS TRUE CACHE BOOL "Build shared libraries")
 
+if(CMAKE_COMPILER_IS_GNUCXX OR CMAKE_CXX_COMPILER_ID MATCHES "Clang")
+  set(CMAKE_CXX_FLAGS "-Wno-deprecated-declarations ${CMAKE_CXX_FLAGS}")
+endif()
+
 ament_vendor(spdlog_vendor
   SATISFIED ${spdlog_FOUND}
   VCS_URL https://github.com/gabime/spdlog.git
@@ -17,7 +21,7 @@ ament_vendor(spdlog_vendor
   CMAKE_ARGS
     -DSPDLOG_BUILD_TESTS:BOOL=OFF
     -DSPDLOG_BUILD_EXAMPLE:BOOL=OFF
-    "-DCMAKE_CXX_FLAGS=-Wno-deprecated-declarations ${CMAKE_CXX_FLAGS}"
+    "-DCMAKE_CXX_FLAGS=${CMAKE_CXX_FLAGS}"
 )
 
 if(BUILD_TESTING)
