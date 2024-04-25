@@ -17,6 +17,7 @@ ament_vendor(spdlog_vendor
   CMAKE_ARGS
     -DSPDLOG_BUILD_TESTS:BOOL=OFF
     -DSPDLOG_BUILD_EXAMPLE:BOOL=OFF
+    "-DCMAKE_CXX_FLAGS=-Wno-deprecated-declarations"
 )
 
 if(BUILD_TESTING)
