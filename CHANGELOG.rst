@@ -2,6 +2,11 @@
 Changelog for package spdlog_vendor
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+1.8.0 (2025-04-25)
+------------------
+* Remove CODEOWNERS and mirror-rolling-to-master. (`#38 <https://github.com/ros2/spdlog_vendor/issues/38>`_)
+* Contributors: Chris Lalancette
+
 1.7.0 (2024-04-29)
 ------------------
 * Removed spdlog_vendor warnings (`#36 <https://github.com/ros2/spdlog_vendor/issues/36>`_)
