@@ -17,7 +17,7 @@ endif()
 ament_vendor(spdlog_vendor
   SATISFIED ${spdlog_FOUND}
   VCS_URL https://github.com/gabime/spdlog.git
-  VCS_VERSION v1.12.0
+  VCS_VERSION v1.15.3
   CMAKE_ARGS
     -DSPDLOG_BUILD_TESTS:BOOL=OFF
     -DSPDLOG_BUILD_EXAMPLE:BOOL=OFF
