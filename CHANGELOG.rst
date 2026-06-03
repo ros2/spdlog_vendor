@@ -2,8 +2,8 @@
 Changelog for package spdlog_vendor
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Forthcoming
------------
+1.6.2 (2026-06-03)
+------------------
 * Remove CODEOWNERS and mirror-rolling-to-master. (`#38 <https://github.com/ros2/spdlog_vendor/issues/38>`_) (`#39 <https://github.com/ros2/spdlog_vendor/issues/39>`_)
   They are both outdated and both no longer serve their
   intended purpose.
