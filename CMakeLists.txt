@@ -4,7 +4,7 @@ project(spdlog_vendor CXX)
 find_package(ament_cmake REQUIRED)
 find_package(ament_cmake_vendor_package REQUIRED)
 
-find_package(spdlog 1.5.0 QUIET)
+find_package(spdlog 1.15.3 QUIET)
 
 # While most CMake projects build shared libraries by default, it appears that
 # spdlog needs to be told to do so explicitly.
@@ -17,7 +17,7 @@ endif()
 ament_vendor(spdlog_vendor
   SATISFIED ${spdlog_FOUND}
   VCS_URL https://github.com/gabime/spdlog.git
-  VCS_VERSION v1.12.0
+  VCS_VERSION v1.15.3
   CMAKE_ARGS
     -DSPDLOG_BUILD_TESTS:BOOL=OFF
     -DSPDLOG_BUILD_EXAMPLE:BOOL=OFF
